@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IAAA — Inteligência Artificial Aplicada à Arquitetura</title>
+<meta name="description" content="Exploração de ferramentas de IA na produção de renders arquitetónicos — Exercícios com o Gemini e o ChatGPT.">
+<script>document.documentElement.className += " js";</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header" id="topo">
+  <div class="wrap header-inner">
+    <a class="brand" href="#abertura" aria-label="IAAA — início">IAAA</a>
+    <nav class="site-nav" aria-label="Navegação principal">
+      <a href="#exercicio-01" data-nav="exercicio-01">01 — Gemini</a>
+      <a href="#exercicio-02" data-nav="exercicio-02">02 — ChatGPT</a>
+      <a href="#conclusoes" data-nav="conclusoes">Considerações</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- 01 — ABERTURA -->
+  <section class="section hero" id="abertura" data-section="abertura">
+    <div class="wrap">
+      <div class="hero-top">
+        <p class="mono eyebrow">Arquitetura — 5.º ano</p>
+      </div>
+
+      <h1 class="hero-title">IAAA</h1>
+
+      <div class="hero-lede">
+        <div class="hero-col hero-col--main">
+          <h2 class="hero-subtitle">Inteligência Artificial Aplicada à Arquitetura</h2>
+          <p class="hero-intro">
+            Este trabalho reúne dois exercícios de exploração da inteligência artificial enquanto
+            ferramenta de representação arquitetónica. Em cada exercício são documentados os elementos
+            de partida, o prompt utilizado e o resultado obtido, de forma a tornar visível o processo
+            que conduz da referência à imagem final.
+          </p>
+        </div>
+        <div class="hero-col hero-col--meta">
+          <p class="hero-ident mono">Exploração de ferramentas de IA na produção de renders arquitetónicos</p>
+          <p class="hero-note mono">Mestrado Integrado em Arquitetura</p>
+        </div>
+      </div>
+
+      <nav class="hero-index" aria-label="Índice dos exercícios">
+        <a class="index-item" href="#exercicio-01">
+          <span class="mono index-num">01</span>
+          <span class="index-title">Gemini</span>
+          <span class="index-desc">Render a partir de um alçado e de um prompt</span>
+        </a>
+        <a class="index-item" href="#exercicio-02">
+          <span class="mono index-num">02</span>
+          <span class="index-title">ChatGPT</span>
+          <span class="index-desc">Renders a partir de uma maquete e de uma planta</span>
+        </a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- 02 — EXERCÍCIO 01 / GEMINI -->
+  <section class="section" id="exercicio-01" data-section="exercicio-01">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="mono section-num">Exercício 01</p>
+        <h2 class="section-title">Gemini</h2>
+        <p class="section-lead">
+          Neste exercício foi utilizado o <strong>Gemini</strong> para gerar um render arquitetónico
+          com base num alçado e numa instrução textual. O alçado serviu de ponto de partida e o prompt
+          definiu o estilo, os materiais, o ambiente e a iluminação pretendidos.
+        </p>
+      </header>
+
+      <div class="flow">
+
+        <figure class="figure reveal">
+          <div class="figure-media">
+            <img src="imagens/ex1-alcado.png" alt="Alçado de referência utilizado como ponto de partida no exercício com o Gemini."
+                 loading="lazy" decoding="async" data-lightbox data-caption="Alçado de referência — ponto de partida">
+          </div>
+          <figcaption class="figure-cap">
+            <span class="mono fig-tag">Imagem de referência</span>
+            <span class="fig-txt">Alçado utilizado como base do exercício.</span>
+          </figcaption>
+        </figure>
+
+        <section class="prompt reveal" aria-label="Prompt utilizado no Gemini">
+          <div class="prompt-head">
+            <div>
+              <p class="mono prompt-label">Prompt utilizado</p>
+              <p class="prompt-tool mono">Gemini</p>
+            </div>
+            <button class="copy-btn mono" type="button" data-copy="#prompt-gemini">
+              Copiar prompt
+            </button>
+          </div>
+          <pre id="prompt-gemini" class="prompt-text">Prompt para Embelezar Alçado de 4 Casas de Campo em Madeira:
+"[Estilo de Renderização: ex: Fotorrealista], alçado frontal plano e perfeitamente ortográfico das minhas 4 casas de campo de refúgio em madeira.
+Materiais: A madeira deve ter [Textura desejada: ex: ripas verticais de cedro envelhecido, troncos rústicos, madeira carbonizada (Shou Sugi Ban)], com juntas metálicas sutis e discretas. Os telhados são de [Material do Telhado: ex: chapa metálica escura, telhas cerâmicas, telhado verde/vivo]. As janelas e portas têm caixilharias de [Material da Caixilharia: ex: alumínio preto, madeira na mesma cor] e vidros [Tipo de Vidro: ex: transparentes, refletindo a natureza].
+Ambiente: Separa as casas 3 metros umas das outras e adiciona vegetação entre elas. As casas estão integradas numa paisagem de [Tipo de Paisagem: ex: encosta de montanha, pinhal denso, campo aberto] sob um céu [Tipo de Céu: ex: limpo de fim de tarde, nublado suave]. No primeiro plano, existe vegetação rasteira [Tipo de Vegetação: ex: arbustos autóctones, relva silvestre] e [Adicionar detalhes: ex: um pequeno caminho de pedra, lenha empilhada].
+Iluminação e Atmosfera: A luz é [Luz desejada: ex: 'golden hour' quente e suave, luz solar direta criando sombras dramáticas]. Uma luz quente e acolhedora emana do interior através das janelas. A atmosfera é de [Atmosfera desejada: ex: isolamento tranquilo, conforto rústico].
+Detalhes Técnicos: Alta resolução, renderizado em [Ferramenta: ex: Octane Render, V-Ray], [Adicionar estilo de traço se desejar: ex: com linhas de contorno finas e precisas para realçar a estrutura], [Opcional: Figuras humanas em escala minimalista para referência]."</pre>
+        </section>
+
+        <figure class="figure figure--result reveal">
+          <div class="figure-media figure-media--frame">
+            <img src="imagens/ex1-resultado.png" alt="Render arquitetónico produzido pelo Gemini a partir do alçado e do prompt."
+                 loading="lazy" decoding="async" data-lightbox data-caption="Resultado gerado — Gemini">
+          </div>
+          <figcaption class="figure-cap">
+            <span class="mono fig-tag">Resultado gerado</span>
+            <span class="fig-txt">Render produzido pelo Gemini a partir do alçado e do prompt.</span>
+          </figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 — EXERCÍCIO 02 / CHATGPT -->
+  <section class="section" id="exercicio-02" data-section="exercicio-02">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="mono section-num">Exercício 02</p>
+        <h2 class="section-title">ChatGPT</h2>
+        <p class="section-lead">
+          Este exercício consistiu na produção de renders arquitetónicos com o <strong>ChatGPT</strong>,
+          a partir de fotografias da maquete física e de uma planta de localização. Foram realizadas
+          duas tentativas, com prompts de diferente nível de detalhe.
+        </p>
+      </header>
+
+      <section class="reference reveal" aria-label="Material de referência">
+        <div class="reference-head">
+          <p class="mono prompt-label">Material de referência</p>
+          <p class="reference-note">Elementos de partida comuns às duas tentativas.</p>
+        </div>
+        <div class="grid-2">
+          <figure class="figure">
+            <div class="figure-media figure-media--frame">
+              <img src="imagens/ex2-maquete.png" alt="Fotografia da maquete física do projeto."
+                   loading="lazy" decoding="async" data-lightbox data-caption="Maquete física">
+            </div>
+            <figcaption class="figure-cap">
+              <span class="mono fig-tag">Maquete física</span>
+              <span class="fig-txt">Fotografia da maquete do projeto.</span>
+            </figcaption>
+          </figure>
+          <figure class="figure">
+            <div class="figure-media figure-media--frame">
+              <img src="imagens/ex2-planta.png" alt="Planta de localização do projeto."
+                   loading="lazy" decoding="async" data-lightbox data-caption="Planta de localização">
+            </div>
+            <figcaption class="figure-cap">
+              <span class="mono fig-tag">Planta de localização</span>
+              <span class="fig-txt">Implantação do projeto.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- VERSÃO 01 -->
+      <article class="version reveal" aria-label="Versão 01 — prompt inicial">
+        <header class="version-head">
+          <p class="mono version-tag">Versão 01</p>
+          <h3 class="version-title">Prompt inicial</h3>
+        </header>
+
+        <section class="prompt" aria-label="Prompt inicial do ChatGPT">
+          <div class="prompt-head">
+            <div>
+              <p class="mono prompt-label">Prompt utilizado</p>
+              <p class="prompt-tool mono">ChatGPT · Versão 01</p>
+            </div>
+            <button class="copy-btn mono" type="button" data-copy="#prompt-chatgpt-1">
+              Copiar prompt
+            </button>
+          </div>
+          <pre id="prompt-chatgpt-1" class="prompt-text">Faz um render com base nesta maquete e nesta planta. Este projeto está situado no Montijo rodeado de  água. É um museu de barcos e teve como referência de materialidades a ópera de Oslo. Em termos de dimensão, a parte mais alta do museu tem 20 metros.</pre>
+        </section>
+
+        <figure class="figure figure--result">
+          <div class="figure-media figure-media--frame">
+            <img src="imagens/ex2-resultado-1.png" alt="Primeiro render produzido pelo ChatGPT na versão 01 do exercício."
+                 loading="lazy" decoding="async" data-lightbox data-caption="Resultado gerado — Versão 01">
+          </div>
+          <figcaption class="figure-cap">
+            <span class="mono fig-tag">Resultado gerado</span>
+            <span class="fig-txt">Primeiro render produzido pelo ChatGPT.</span>
+          </figcaption>
+        </figure>
+      </article>
+
+      <!-- VERSÃO 02 -->
+      <article class="version reveal" aria-label="Versão 02 — prompt desenvolvido">
+        <header class="version-head">
+          <p class="mono version-tag">Versão 02</p>
+          <h3 class="version-title">Prompt desenvolvido</h3>
+        </header>
+
+        <section class="prompt" aria-label="Prompt desenvolvido do ChatGPT">
+          <div class="prompt-head">
+            <div>
+              <p class="mono prompt-label">Prompt utilizado</p>
+              <p class="prompt-tool mono">ChatGPT · Versão 02</p>
+            </div>
+            <button class="copy-btn mono" type="button" data-copy="#prompt-chatgpt-2">
+              Copiar prompt
+            </button>
+          </div>
+          <pre id="prompt-chatgpt-2" class="prompt-text">Prompt para Renderização de um Museu de Barcos no Montijo
+Estilo de Renderização: Cria um render arquitetónico fotorrealista com base na maquete 3D e na planta fornecidas. Respeita a geometria, a volumetria, as proporções e a organização do projeto original, sem alterar a arquitetura. O projeto é um museu de barcos situado no Montijo, implantado sobre a água, com uma altura máxima de 20 metros.
+Materiais e Texturas: Utiliza como referência a Ópera de Oslo, com revestimentos em pedra natural clara, de textura subtil e acabamento mate. Integra grandes superfícies envidraçadas com caixilharias metálicas discretas, criando uma relação visual entre o interior do museu e a paisagem aquática.
+Ambiente e Envolvente: O edifício está rodeado pela água do estuário do Tejo, com reflexos naturais e pequenas ondulações. Ao fundo, inclui a linha do horizonte e a paisagem ribeirinha do Montijo. A envolvente deve ser simples e natural, destacando a arquitetura e a sua integração na água.
+Iluminação e Atmosfera: Utiliza luz natural suave, com um céu parcialmente nublado ou a luz quente do final da tarde. Valoriza as texturas dos materiais, os reflexos na água e as sombras do edifício, criando uma atmosfera serena e contemporânea.
+Detalhes Técnicos: Renderização de alta resolução, com materiais realistas, iluminação natural e qualidade de fotografia profissional de arquitetura. Inclui algumas figuras humanas e, se adequado, barcos para dar escala ao edifício.
+Instrução Fundamental: Mantém rigorosamente a forma, a volumetria e a implantação da maquete e da planta fornecidas. Desenvolve apenas os materiais, a iluminação e a envolvente, utilizando a Ópera de Oslo como referência material e arquitetónica.</pre>
+        </section>
+
+        <figure class="figure figure--result">
+          <div class="figure-media figure-media--frame">
+            <img src="imagens/ex2-resultado-2.png" alt="Segundo render produzido pelo ChatGPT na versão 02 do exercício."
+                 loading="lazy" decoding="async" data-lightbox data-caption="Resultado gerado — Versão 02">
+          </div>
+          <figcaption class="figure-cap">
+            <span class="mono fig-tag">Resultado gerado</span>
+            <span class="fig-txt">Segundo render produzido pelo ChatGPT.</span>
+          </figcaption>
+        </figure>
+      </article>
+
+      <!-- COMPARAÇÃO -->
+      <section class="comparison reveal" aria-label="Comparação entre as duas versões">
+        <header class="comparison-head">
+          <p class="mono prompt-label">Comparação visual</p>
+          <h3 class="version-title">Versão 01 e Versão 02</h3>
+          <p class="comparison-note">
+            Os dois renders são apresentados lado a lado, a partir das mesmas referências
+            (maquete e planta) mas com prompts de diferente detalhe.
+          </p>
+        </header>
+        <div class="grid-2 grid-2--compare">
+          <figure class="figure">
+            <div class="figure-media figure-media--frame">
+              <img src="imagens/ex2-resultado-1.png" alt="Render da versão 01, com o prompt inicial."
+                   loading="lazy" decoding="async" data-lightbox data-caption="Versão 01 — prompt inicial">
+            </div>
+            <figcaption class="figure-cap">
+              <span class="mono fig-tag">Versão 01</span>
+              <span class="fig-txt">Prompt inicial.</span>
+            </figcaption>
+          </figure>
+          <figure class="figure">
+            <div class="figure-media figure-media--frame">
+              <img src="imagens/ex2-resultado-2.png" alt="Render da versão 02, com o prompt desenvolvido."
+                   loading="lazy" decoding="async" data-lightbox data-caption="Versão 02 — prompt desenvolvido">
+            </div>
+            <figcaption class="figure-cap">
+              <span class="mono fig-tag">Versão 02</span>
+              <span class="fig-txt">Prompt desenvolvido.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+    </div>
+  </section>
+
+  <!-- 04 — CONSIDERAÇÕES FINAIS -->
+  <section class="section section--final" id="conclusoes" data-section="conclusoes">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="mono section-num">Considerações finais</p>
+        <h2 class="section-title">A IA como ferramenta de representação</h2>
+      </header>
+      <div class="final-text reveal">
+        <p>
+          Os dois exercícios mostram a inteligência artificial como parte integrante do processo de
+          representação arquitetónica, e não apenas como um passo final de imagem. Em ambos os casos,
+          o resultado depende das referências visuais fornecidas — o alçado, a maquete e a planta — e
+          da forma como o prompt as interpreta.
+        </p>
+        <p>
+          O prompt surge assim como o principal instrumento de mediação entre a intenção do projeto e
+          a imagem produzida. A sua formulação condiciona o grau de controlo sobre o resultado: no
+          exercício com o ChatGPT, a passagem de um prompt inicial para um prompt desenvolvido
+          traduz-se em diferenças visíveis, ainda que a avaliação dessas diferenças dependa da leitura
+          de cada observador.
+        </p>
+        <p>
+          As referências visuais — o alçado, as fotografias da maquete e a planta — revelam-se
+          decisivas, uma vez que é a partir delas que a ferramenta reconhece a forma e a implantação
+          do projeto. Entre a intenção arquitetónica e o render final existe um processo de tradução,
+          conduzido pelo prompt, que molda o modo como o projeto é apresentado.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span class="mono">IAAA — Inteligência Artificial Aplicada à Arquitetura</span>
+    <span class="mono">Exploração de ferramentas de IA na produção de renders arquitetónicos</span>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualização ampliada da imagem" hidden>
+  <button class="lightbox-close mono" type="button" aria-label="Fechar visualização">&times;</button>
+  <figure class="lightbox-figure">
+    <img class="lightbox-img" id="lightbox-img" src="" alt="">
+    <figcaption class="lightbox-cap mono" id="lightbox-cap"></figcaption>
+  </figure>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
